@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Biglietto treno (form) </title>
 </head>
-<body class="bg-danger">
+<body>
     <section id="top-section">
         <h2 class="text-center fw-bold text-light py-3">
             CALCOLA IL PREZZO DEL TUO BIGLIETTO
@@ -26,24 +26,34 @@
                             <label for="text-km" class="form-label fs-5 fw-semibold text-danger">
                                 Km da percorrere
                             </label>
-                            <input type="number" id="text-name" class="form-control border border-danger text-center" placeholder="Inserisci i Km">
+                            <input type="number" id="text-name" class="form-control border border-danger text-center " placeholder="Inserisci i Km">
                         </div>
                         <div class="text-center">
                             <label for="text-age" class="form-label fs-5 fw-semibold text-danger">
                                 Fascia d'età
                             </label>
-                            <select class="form-select border border-danger">
+                            <select class="form-select border border-danger bg-light">
                                 <option selected class="d-none">Inserisci la tua età</option>
                                 <option value="1">Minorenne</option>
                                 <option value="2">Maggiorenne</option>
                                 <option value="3">Over 65</option>
                             </select>
-                        </div>
+                        </div>    
                     </div>
+                    <div class="text-center pt-5">
+                        <button id="play-button" type="button" class="btn btn-secondary me-3 fs-6 fw-bold">
+                        Genera
+                        </button>
+                        <button type="button" class="btn btn-secondary fs-6 fw-bold">
+                            Annulla
+                        </button>
+                    </div> 
                 </div> <!--end card body-->
             </div> <!--end card -->
         </div> <!--end container-->
     </section>    
+
+    <!--Bottom section-->
 
 <script type="text/javascript" src="js/main.js"></script>   
 </body>

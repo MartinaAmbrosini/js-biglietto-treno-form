@@ -26,13 +26,13 @@
                             <label for="text-km" class="form-label fs-5 fw-semibold text-danger">
                                 Km da percorrere
                             </label>
-                            <input type="number" id="text-name" class="form-control border border-danger text-center " placeholder="Inserisci i Km">
+                            <input type="number" id="text-km" class="form-control border border-danger text-center " placeholder="Inserisci i Km">
                         </div>
                         <div class="text-center">
                             <label for="text-age" class="form-label fs-5 fw-semibold text-danger">
                                 Fascia d'età
                             </label>
-                            <select class="form-select border border-danger bg-light">
+                            <select id="text-age" class="form-select border border-danger bg-light">
                                 <option selected class="d-none">Inserisci la tua età</option>
                                 <option value="1">Minorenne</option>
                                 <option value="2">Maggiorenne</option>
@@ -54,7 +54,36 @@
     </section>    
 
     <!--Bottom section-->
-
-<script type="text/javascript" src="js/main.js"></script>   
+    <section class="container">
+        <h2 class="text-center fw-bold text-light py-3">IL TUO BIGLIETTO</h2>
+        <div class="card bg-light border-none">
+            <div class="card-body">
+               <h2>DETTAGLI PASSEGGERI</h2>
+               <div class="d-flex justify-content-between" style="border: 2px solid grey;">
+                    <div class="px-2 rounded-2 text-center rounded-3" style="background-color: #757575;">
+                        <h3>Nome passeggero</h3>
+                        <h4 id="username"></h4>
+                    </div>
+                    <div class="border border-danger rounded-3 px-1 text-center fw-bold">
+                        <h3>Offerta</h3>
+                        <h4>Biglietto Standard</h4>
+                    </div>
+                    <div class="border border-danger rounded-3 px-1 text-center">
+                        <h3>Carrozza</h3>
+                        <h4>5</h4>
+                    </div>
+                    <div class="border border-danger rounded-3 px-1 text-center">
+                        <h3>Codice CP</h3>
+                        <h4>92911</h4>
+                    </div>
+                    <div class="border border-danger rounded-3 px-1 text-center">
+                        <h3>Costo biglietto</h3>
+                        <h4 id="price"></h4>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </section>
+<script type="text/javascript" src="js/script.js"></script>   
 </body>
 </html>

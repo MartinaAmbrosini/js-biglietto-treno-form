@@ -35,8 +35,8 @@
                             <select id="text-age" class="form-select border border-danger bg-light">
                                 <option selected class="d-none">Inserisci la tua età</option>
                                 <option value="1">Minorenne</option>
-                                <option value="2">Maggiorenne</option>
-                                <option value="3">Over 65</option>
+                                <option value="18">Maggiorenne</option>
+                                <option value="66">Over 65</option>
                             </select>
                         </div>    
                     </div>
@@ -44,7 +44,7 @@
                         <button id="play-button" type="button" class="btn btn-secondary me-3 fs-6 fw-bold">
                         Genera
                         </button>
-                        <button type="button" class="btn btn-secondary fs-6 fw-bold">
+                        <button id="delete-button" type="button" class="btn btn-secondary fs-6 fw-bold">
                             Annulla
                         </button>
                     </div> 
@@ -54,12 +54,12 @@
     </section>    
 
     <!--Bottom section-->
-    <section class="container">
+    <section class="container d-none" id="display">
         <h2 class="text-center fw-bold text-light py-3">IL TUO BIGLIETTO</h2>
         <div class="card bg-light border-none">
             <div class="card-body">
                <h2>DETTAGLI PASSEGGERI</h2>
-               <div class="d-flex justify-content-between" style="border: 2px solid grey;">
+               <div class="d-flex justify-content-between">
                     <div class="px-2 rounded-2 text-center rounded-3" style="background-color: #757575;">
                         <h3>Nome passeggero</h3>
                         <h4 id="username"></h4>

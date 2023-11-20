@@ -9,34 +9,39 @@
 // La risposta finale (o output) sarà anch’essa da scrivere in console.
 // MILESTONE 2: Solo una volta che il milestone 1 sarà completo e funzionante allora finalizzeremo il layout di pagina, in cui l’utente vedrà il form stilizzato e tutto l’output stampato in pagina (il prezzo dovrà sempre essere formattato con massimo due decimali).
 
-const userName = document.getElementById("text-name");
-const userKm = parseFloat(document.getElementById("text-km").value);
-const userAge = parseInt(document.getElementById("text-age"));
 const generateTicketButton = document.getElementById("play-button");
-
-const userNameEl = document.getElementById("username");
-const price = document.getElementById("price");
-
+const deleteTicketButton = document.getElementById("delete-button");
+const display = document.getElementById("display");
 
 //* al click del mouse
 generateTicketButton.addEventListener("click", function () {
-    const userNameValue = userName.value;
-    const userKmValue = userKm.value;
-    console.log(userKm)
-    const userAgeValue = userAge.value;
-  
+    const userName = document.getElementById("text-name");
+    const userKm = parseFloat(document.getElementById("text-km").value);
+    const userAge = parseInt(document.getElementById("text-age").value);
+    const userNameEl = document.getElementById("username");
+    const price = document.getElementById("price");
+
+    display.classList.replace("d-none","d-block");
+
     const ticketfare = 0.21;
-    let ticketPrice = userKmValue * ticketfare;
+    let ticketPrice = userKm * ticketfare;
     //* se l'età dell'utente è meno di 18
-    if (userAgeValue < 18) {
+    if (userAge < 18) {
       //* applichiamo uno sconto del 20%
       ticketPrice *= 0.8;
       //* altrimenti se l'età dell'utente è meno di 18
-    } else if (userAgeValue > 65) {
+    } else if (userAge > 65) {
       //* applichiamo uno sconto del 40%
       ticketPrice *= 0.6;
     }
+
     //* infine stampiamo il biglietto
-    userNameEl.innerHTML = userNameValue;
+    userNameEl.innerHTML = userName.value;
     price.innerHTML = "€ " + ticketPrice.toFixed(2);
+    
+    console.log(ticketPrice.toFixed(2));
+  });
+
+  deleteTicketButton.addEventListener("click", function () {
+    window.location.reload(true);
   });
